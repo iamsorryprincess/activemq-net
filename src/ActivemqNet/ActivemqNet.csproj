@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <PackageProjectUrl></PackageProjectUrl>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <RepositoryUrl>https://github.com/iamsorryprincess/activemq-net</RepositoryUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageTags>ActiveMQ, ActiveNet, ApacheActiveNet</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Apache.NMS.ActiveMQ.NetStd" Version="1.8.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="3.1.9" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="3.1.9" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="3.1.9" />
+    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="3.1.9" />
+  </ItemGroup>
+
+</Project>

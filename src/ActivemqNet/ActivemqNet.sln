@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30621.155
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ActivemqNet", "ActivemqNet.csproj", "{463EB6D2-ADF0-4BD6-9144-20DB269ED6FC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{463EB6D2-ADF0-4BD6-9144-20DB269ED6FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{463EB6D2-ADF0-4BD6-9144-20DB269ED6FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{463EB6D2-ADF0-4BD6-9144-20DB269ED6FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{463EB6D2-ADF0-4BD6-9144-20DB269ED6FC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {94B71AAE-7B6D-492A-B968-667F6BFBFABA}
+	EndGlobalSection
+EndGlobal
