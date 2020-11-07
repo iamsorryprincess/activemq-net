@@ -13,5 +13,5 @@ jobs:
     steps:
     - uses: actions/checkout@v1
 
-    - name: dotnet publish
-      run: dotnet publish src\ActivemqNet\ActivemqNet.csproj -c Release
+    - name: dotnet build
+      run: dotnet build src/ActivemqNet/ActivemqNet.csproj -c Release
