@@ -10,7 +10,7 @@ namespace ActivemqNet
         public static IServiceCollection AddActiveMQ(this IServiceCollection services, IConfigurationSection configurationSection)
         {
             services.Configure<ActiveMqSettings>(configurationSection);
-            var assembly = Assembly.GetAssembly(typeof(ActiveMqHostedService));
+            var assembly = Assembly.GetEntryAssembly();
             var types = assembly.GetTypes()
                 .Where(x =>
                 {

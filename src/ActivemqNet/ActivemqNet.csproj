@@ -7,6 +7,8 @@
     <RepositoryUrl>https://github.com/iamsorryprincess/activemq-net</RepositoryUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageTags>ActiveMQ, ActiveNet, ApacheActiveNet</PackageTags>
+    <Version>1.0.2</Version>
+    <Description>Convenient use of the Apache.NMS.ActiveMQ package.</Description>
   </PropertyGroup>
 
   <ItemGroup>

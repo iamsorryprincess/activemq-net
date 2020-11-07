@@ -1,0 +1,17 @@
+name: build
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+
+    - name: dotnet publish
+      run: dotnet publish src\ActivemqNet\ActivemqNet.csproj -c Release

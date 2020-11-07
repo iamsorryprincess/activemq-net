@@ -55,7 +55,7 @@ namespace ActivemqNet
             _amqConnection.Start();
             _amqSession = _amqConnection.CreateSession();
 
-            var assembly = Assembly.GetAssembly(typeof(ActiveMqHostedService));
+            var assembly = Assembly.GetEntryAssembly();
             var types = assembly.GetTypes()
                 .Where(x =>
                 {
