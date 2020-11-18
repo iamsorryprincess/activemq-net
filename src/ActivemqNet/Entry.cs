@@ -1,29 +1,31 @@
-﻿using System.Linq;
-using System.Reflection;
-using Microsoft.Extensions.Configuration;
+﻿using System;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace ActivemqNet
 {
     public static class Entry
     {
-        public static IServiceCollection AddActiveMQ(this IServiceCollection services, IConfigurationSection configurationSection)
+        public static IServiceCollection AddActiveMq(this IServiceCollection services, Action<ActiveMqSettings> setupAction)
         {
-            services.Configure<ActiveMqSettings>(configurationSection);
-            var assembly = Assembly.GetEntryAssembly();
-            var types = assembly.GetTypes()
-                .Where(x =>
-                {
-                    var consumerInterface = x.GetInterfaces().FirstOrDefault(a => a.Name.Contains(nameof(IConsumer<object>)));
-                    return consumerInterface != null && x.IsClass;
-                })
-                .ToDictionary(key => key.GetInterfaces().FirstOrDefault(a => a.Name.Contains(nameof(IConsumer<object>))), value => value);
+            var settings = new ActiveMqSettings();
+            setupAction.Invoke(settings);
 
-            foreach (var type in types)
+            foreach (var registrations in settings.ConsumerRegistrations.Values)
             {
-                services.AddTransient(type.Key, type.Value);
+                foreach (var (consumer, implementation) in registrations)
+                {
+                    services.AddTransient(consumer, implementation);
+                }
             }
 
+            if (settings.EventHandlers.Count > 0)
+            {
+                var handlerImplementation = settings.EventHandlers[0];
+                services.AddTransient(typeof(IEventHandler), handlerImplementation);
+            }
+            
+            services.AddSingleton(settings);
+            services.AddSingleton<MessageBus>();
             services.AddHostedService<ActiveMqHostedService>();
             return services;
         }

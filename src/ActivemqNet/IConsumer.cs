@@ -2,10 +2,10 @@
 
 namespace ActivemqNet
 {
-    public interface IConsumer<TMessage> where TMessage : class, new()
-    {
-        string QueueName { get; }
+    public interface IConsumer { }
 
+    public interface IConsumer<in TMessage> : IConsumer where TMessage : class, new()
+    {
         Task Consume(TMessage message);
     }
 }

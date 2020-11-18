@@ -7,16 +7,23 @@
     <RepositoryUrl>https://github.com/iamsorryprincess/activemq-net</RepositoryUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageTags>ActiveMQ, ActiveNet, ApacheActiveNet</PackageTags>
-    <Version>1.0.2</Version>
+    <Version>1.1.0</Version>
     <Description>Convenient use of the Apache.NMS.ActiveMQ package.</Description>
+    <PackageIcon>amq.png</PackageIcon>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Apache.NMS.ActiveMQ.NetStd" Version="1.8.0" />
     <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="3.1.9" />
-    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="3.1.9" />
-    <PackageReference Include="Microsoft.Extensions.Options" Version="3.1.9" />
-    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="3.1.9" />
+    <PackageReference Include="Polly" Version="7.2.1" />
+    <PackageReference Include="System.Reactive" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="C:\Users\NickP\Desktop\amq.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>

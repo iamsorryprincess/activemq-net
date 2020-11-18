@@ -1,5 +1,4 @@
-﻿using System;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using System.Xml.Serialization;
 using ActivemqNet;
 
@@ -13,12 +12,17 @@ namespace ActivemqNetExample
 
     public class Consumer : IConsumer<Request>
     {
-        public string QueueName => "queue";
+        private readonly MessageBus _bus;
 
+        public Consumer(MessageBus bus)
+        {
+            _bus = bus;
+        }
+        
         public async Task Consume(Request message)
         {
             await Task.Delay(500);
-            Console.WriteLine(message.Name);
+            _bus.Publish(message);
         }
     }
 }
