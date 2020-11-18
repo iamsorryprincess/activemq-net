@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <PackageProjectUrl></PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/iamsorryprincess/activemq-net</PackageProjectUrl>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <RepositoryUrl>https://github.com/iamsorryprincess/activemq-net</RepositoryUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
@@ -20,7 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="C:\Users\NickP\Desktop\amq.png">
+    <None Include="..\..\amq.png">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
