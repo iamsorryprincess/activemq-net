@@ -10,6 +10,9 @@
     <Version>1.1.0</Version>
     <Description>Convenient use of the Apache.NMS.ActiveMQ package.</Description>
     <PackageIcon>amq.png</PackageIcon>
+    <Title>Easy Apache.NMS.ActiveMQ</Title>
+    <Authors>Nikita Pankratov</Authors>
+    <PackageVersion>1.1.1</PackageVersion>
   </PropertyGroup>
 
   <ItemGroup>
