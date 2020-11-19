@@ -1,6 +1,7 @@
 # ActiveMQNet
 [![build](https://github.com/iamsorryprincess/activemq-net/workflows/build/badge.svg)](https://github.com/iamsorryprincess/activemq-net/actions)
 
+### Currently works only with text messages (ITextMessage).
 Just define a type that implements IConsumer<Message>, where Message is the class in which instance the incoming message will be deserialized from xml.
 
 ## Configuring
