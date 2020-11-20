@@ -170,7 +170,7 @@ namespace ActivemqNet
                         }
 
                         default:
-                            _eventHandler?.HandleError($"Unknown message type in queue {queueName}");
+                            _eventHandler?.HandleError($"Unknown message type (${message?.GetType().Name}) in queue {queueName}");
                             break;
                     }
                 };
@@ -182,7 +182,7 @@ namespace ActivemqNet
                     var service = _serviceProvider.GetService(consumerType);
 
                     _queueRequestConditions[queueName].Add(
-                        msg => msg.Contains($"<{generic?.Name}") || _settings.CustomXmlTags.Any(xmlTag => msg.Contains($"<{xmlTag} {generic?.Name}")),
+                        msg => msg.Contains($"<{generic?.Name}") || _settings.CustomXmlTags.Any(xmlTag => msg.Contains($"<{xmlTag}:{generic?.Name}")),
                         async msg =>
                     {
                         var message = Serializer.DeserializeMessage(msg, generic);
