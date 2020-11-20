@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>netstandard2.1</TargetFramework>
     <PackageProjectUrl>https://github.com/iamsorryprincess/activemq-net</PackageProjectUrl>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <RepositoryUrl>https://github.com/iamsorryprincess/activemq-net</RepositoryUrl>
@@ -12,12 +12,12 @@
     <PackageIcon>amq.png</PackageIcon>
     <Title>Easy Apache.NMS.ActiveMQ</Title>
     <Authors>Nikita Pankratov</Authors>
-    <PackageVersion>1.1.2</PackageVersion>
+    <PackageVersion>1.1.3</PackageVersion>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Apache.NMS.ActiveMQ.NetStd" Version="1.8.0" />
-    <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="3.1.9" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="3.1.5" />
     <PackageReference Include="Polly" Version="7.2.1" />
     <PackageReference Include="System.Reactive" Version="5.0.0" />
   </ItemGroup>
