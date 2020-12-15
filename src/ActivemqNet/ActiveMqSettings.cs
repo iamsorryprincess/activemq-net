@@ -13,6 +13,8 @@ namespace ActivemqNet
         internal string Password { get; private set; } = "admin";
 
         internal int ReconnectionInterval { get; private set; } = 5;
+
+        internal bool IsFullLoggingMessage { get; private set; } = false;
         
         internal List<string> CustomXmlTags { get; private set; } = new List<string>();
         
@@ -35,6 +37,8 @@ namespace ActivemqNet
         public void SetReconnectionInterval(int interval) => ReconnectionInterval = interval;
 
         public void AddCustomXmlTag(string xmlTag) => CustomXmlTags.Add(xmlTag);
+
+        public void LoggingFullMessage() => IsFullLoggingMessage = true;
 
         public void RegisterEventHandler<THandler>() where THandler : IEventHandler
         {

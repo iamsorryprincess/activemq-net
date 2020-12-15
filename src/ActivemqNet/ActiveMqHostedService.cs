@@ -156,6 +156,11 @@ namespace ActivemqNet
                     {
                         case ITextMessage msg when !string.IsNullOrWhiteSpace(msg.Text):
                         {
+                            if (_settings.IsFullLoggingMessage)
+                            {
+                                _eventHandler?.HandleEvent($"Message from queue {queueName}: {msg.Text}");
+                            }
+                            
                             var queueCallback = _queueRequestConditions[queueName]
                                 .FirstOrDefault(x => x.Key.Invoke(msg.Text)).Value;
 
